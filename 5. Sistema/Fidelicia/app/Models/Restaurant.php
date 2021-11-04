@@ -36,4 +36,9 @@ class Restaurant extends Model
         'cep'    => 'int',
         'cnpj'   => 'int',
     ];
+
+    public static function getRestaurant(int $userId)
+    {
+        return self::where('user_id', $userId)->get();
+    }
 }

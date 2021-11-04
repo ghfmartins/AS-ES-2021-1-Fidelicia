@@ -19,10 +19,7 @@ class Controller extends BaseController
      */
     protected static function threadException(\Exception $e): \Illuminate\Http\JsonResponse
     {
-        return response()->json(
-            $e->getMessage(),
-            $e->getCode() ?? 500
-        );
+        return ddd($e);
     }
 
     /**
